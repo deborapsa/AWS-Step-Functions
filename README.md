@@ -9,6 +9,8 @@ Este repositório documenta minha experiência prática com o **AWS Step Functio
 ### 1. Conhecendo o AWS Step Functions
 O AWS Step Functions é um orquestrador de workflows serverless que facilita a coordenação de múltiplos serviços AWS em fluxos de trabalho visuais. Com ele, podemos definir lógicas de execução, paralelismo, tentativas automáticas e muito mais.
 
+👉 [Saiba mais sobre o AWS Step Functions](https://aws.amazon.com/pt/step-functions/)
+
 **Principais conceitos:**
 - **State Machine (Máquina de Estados)**: Define a lógica do fluxo.
 - **States**: Passos no fluxo (Task, Choice, Pass, Fail, Succeed).
