@@ -1,0 +1,30 @@
+{
+  "Comment": "Exemplo de máquina de estados",
+  "StartAt": "ExecutarLambda",
+  "States": {
+    "ExecutarLambda": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:REGIAO:ID_DA_CONTA:function:NOME_DA_FUNCAO",
+      "Next": "VerificarNumero"
+    },
+    "VerificarNumero": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.resultado",
+          "NumericEquals": 0,
+          "Next": "NumeroPar"
+        }
+      ],
+      "Default": "NumeroImpar"
+    },
+    "NumeroPar": {
+      "Type": "Succeed"
+    },
+    "NumeroImpar": {
+      "Type": "Fail",
+      "Error": "NumeroImpar",
+      "Cause": "O número é ímpar."
+    }
+  }
+}
